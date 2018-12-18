@@ -4,7 +4,4 @@ class HelloWorld
 	def hello_world
 		HelloWorldC.hello_world_c
 	end
-	def print_hello
-		puts "Hello"
-	end
 end
