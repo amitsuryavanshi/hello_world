@@ -1,4 +1,4 @@
-Exapmle of using c-extension and java-extension in ruby gem.
+Exapmle of using c-extension and java-extension in same ruby gem.
 
 - For c-extension
 
