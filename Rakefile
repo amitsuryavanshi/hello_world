@@ -1,15 +1,14 @@
 spec = Gem::Specification.load('hello_world')
+require 'rake/javaextensiontask'
+require 'rake/extensiontask'
 
 if RUBY_PLATFORM =~ /java/
-  require 'jars/classpath'
-  require 'rake/javaextensiontask'
   Rake::JavaExtensionTask.new('hello_world', spec) do |ext|
-    ext.ext_dir = 'ext'
+    ext.ext_dir = 'ext/java'
   end
 else
-  require 'rake/extensiontask'
   Rake::ExtensionTask.new("hello_world", spec) do |ext|
-    ext.lib_dir = "lib/hello_world"
+    ext.lib_dir = "lib"
   end
 end
 

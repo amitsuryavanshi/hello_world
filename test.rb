@@ -4,4 +4,9 @@ $LOAD_PATH << 'lib'
 require 'hello_world'
 
 # use it
-puts HelloWorld.new.hello_world
+
+# For MRI
+#puts HelloWorld.hello
+
+# For jRuby
+#puts Java.HelloWorld.hello

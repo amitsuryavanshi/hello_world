@@ -8,15 +8,8 @@ Gem::Specification.new do |s|
   s.email       = 'amitbsuryavanshi@gmail.com'
   s.homepage    = 'http://github.com/amitbsuryavanshi/hello_world'
   s.license     = 'MIT'
-
-  files         = Dir.glob("ext/**/*.{c,java,rb}") + Dir.glob("lib/**/*.rb")
-  if RUBY_PLATFORM =~ /java/
-    s.platform = "java"
-    files << "lib/hello_world.jar"
-  else
-    s.extensions << "ext/hello_world/extconf.rb"
-  end
-  s.files = files
+  s.files       = Dir.glob("ext/**/*.{c,java,rb}") +  Dir.glob("lib/*")
+  s.extensions << "ext/hello_world/extconf.rb"
 
   s.add_development_dependency "rake-compiler", '~> 0'
 end
